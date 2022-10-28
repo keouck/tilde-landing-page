@@ -1,0 +1,27 @@
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(236, 236, 115);
+    pre{white-space:pre-wrap; word-wrap:break-word; overflow:auto;}
+    font-family: SourceCodePro;
+}
+
+.ascii {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-family: SourceCodePro;
+    font-size: 200%;
+}
+
+
+@font-face {
+    font-family: SourceCodePro;
+    src: url(static/SourceCodePro-Light.ttf);
+}
+
+.terminal {
+    font-family: 'SourceCodePro';
+    margin-top: 5%;
+    margin-left: 7%;
+}
