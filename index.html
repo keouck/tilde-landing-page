@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Keouck</title>
 </head>
 <body>
@@ -25,17 +25,21 @@
                                                                     
                                                                                       
 </pre></div>
-    
+
 <div class="terminal">
     
     <b><h2>Heya! Thanks for checking out my page.</h2></b>
     <h2><b>Type <code>keouck help</code> to get started</b></h2><br><br>
+    <form action="{{ url_for('user_inputs')}}" method="post">
     <div id="container">
-        <output></output>
         <div id="input-line" class="input-line">[user@keouck ~]$
-          <div class="prompt"></div><div><input class="cmdline" autofocus /></div> 
+          <div class="prompt"></div><div><input class="cmdline" autofocus required="required" name="user_command"/></div> <input type="submit" hidden/>
         </div>
       </div><br>
+    </form>
+
+  
+    {{ output|safe }}
 </div>
     
 </body>
